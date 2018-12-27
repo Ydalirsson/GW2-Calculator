@@ -1,5 +1,16 @@
 #!/usr/bin/python
+import sys
+from PyQt5 import QtCore, QtGui, QtWidgets, uic
 import random
+
+qtCreatorFile = "window.ui"
+Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
+
+class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
+	def __init__(self, parent = None):
+		QtWidgets.QMainWindow.__init__(self)
+		Ui_MainWindow.__init__(self)
+		self.setupUi(self)
 
 STEPS = 100
 
@@ -86,4 +97,7 @@ def main():
 	avgDmg(1961, 0.7076, 2.1407, sel)	# ass
 
 if __name__ == '__main__':
-	main()
+	app = QtWidgets.QApplication(sys.argv)
+	window = MyApp()
+	window.show()
+	sys.exit(app.exec_())
