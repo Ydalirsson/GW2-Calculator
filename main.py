@@ -98,7 +98,7 @@ def main():
 
 if __name__ == '__main__':
 	app = QtWidgets.QApplication(sys.argv)
-	app.setWindowIcon(QtGui.QIcon("./assets/ele.png"))
+	app.setWindowIcon(QtGui.QIcon("./assets/icon.png"))
 	window = MyApp()
 	window.show()
 	sys.exit(app.exec_())
