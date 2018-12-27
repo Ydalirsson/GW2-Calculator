@@ -1,7 +1,13 @@
 #!/usr/bin/python
 import random
 
-STEPS = 1000000
+STEPS = 100
+
+profs = ["Warrior", "Guardian", "Revenant",
+		 "Ranger", "Thief", "Engineer",
+		 "Necromancer", "Elementalist", "Mesmer"
+		 ]
+
 weapon = {0: [900, 1100, "Axe"],
 			1: [970, 1030, "Dagger"],
 			2: [940, 1060, "Mace"],
@@ -13,8 +19,24 @@ weapon = {0: [900, 1100, "Axe"],
 			8: [966, 1134, "Longbow"],
 			9: [1035, 1265, "Rifle"],
 			10: [950, 1050, "Shortbow"],
-			11: [1034, 1166, "Staff"],
-			}
+			11: [1034, 1166, "Staff"]
+}
+
+health = {
+	0: [9212, [profs[0], profs[6]] ],
+	1: [5922, [profs[2], profs[3], profs[5], profs[8]] ],
+	2: [1645, [profs[1], profs[4], profs[7]] ]
+}
+armor = {
+	0: [1920, [profs[6], profs[7], profs[8]] ],
+	1: [2064, [profs[3], profs[4], profs[5]] ],
+	2: [2211, [profs[0], profs[1], profs[2]] ]
+}
+
+def getValueByProf(dict, value):
+	for i in range(3):
+		if value in dict[i][1]:
+			return dict[i][0]
 
 def avgDmg(strength, precision, ferocity, sel):
 	STRENGTH = strength
@@ -37,14 +59,30 @@ def avgDmg(strength, precision, ferocity, sel):
 	# print(dmgLst)
 	print(sum(dmgLst) / len(dmgLst))
 
+def effecLife(vit, tough):
+	STD_DMG = 1000000
+	i = 0
+	while vit > 0:
+		vit -= STD_DMG / tough
+		i += 1
+	print("Hits to death", i)
+
 
 def main():
+	print("Choose your prof")
+	for i in profs:
+		print(str(i) + " (" + str(profs.index(i)) + ")" )
+	sel = int(input("Enter a number: "))
+	effecLife( getValueByProf(health, profs[sel]) , getValueByProf(armor, profs[sel]))
+	input()
+
 	print("Choose your weapon")
 	for i in weapon:
 		print(weapon[i][2] + " (" + str(i) +")")
 	sel = int(input("Enter a number: "))
 
 	avgDmg(2381, 0.5076, 2.1407, sel)	# bes
+
 	avgDmg(1961, 0.7076, 2.1407, sel)	# ass
 
 if __name__ == '__main__':
