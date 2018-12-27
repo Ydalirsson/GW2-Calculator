@@ -60,52 +60,128 @@
      <string>Waffe</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="ic_ele">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>60</y>
-      <width>48</width>
-      <height>48</height>
+      <x>90</x>
+      <y>70</y>
+      <width>24</width>
+      <height>24</height>
      </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>48</width>
-      <height>48</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>48</width>
-      <height>48</height>
-     </size>
     </property>
     <property name="styleSheet">
      <string notr="true">border-image:url(:/res/assets/ele.png);</string>
     </property>
-    <property name="text">
-     <string/>
-    </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="ic_eng">
     <property name="geometry">
      <rect>
-      <x>580</x>
-      <y>130</y>
-      <width>99</width>
-      <height>27</height>
+      <x>120</x>
+      <y>70</y>
+      <width>24</width>
+      <height>24</height>
      </rect>
     </property>
-    <property name="text">
-     <string>PushButton</string>
+    <property name="styleSheet">
+     <string notr="true">border-image:url(:/res/assets/eng.png);</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ic_gua">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>70</y>
+      <width>24</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image:url(:/res/assets/gua.png);</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ic_mes">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>70</y>
+      <width>24</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image:url(:/res/assets/mes.png);</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ic_nec">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>70</y>
+      <width>24</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image:url(:/res/assets/nec.png);</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ic_ran">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>70</y>
+      <width>24</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image:url(:/res/assets/ran.png);</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ic_rev">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>70</y>
+      <width>24</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image:url(:/res/assets/rev.png);</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ic_thi">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>70</y>
+      <width>24</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image:url(:/res/assets/thi.png);</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ic_war">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>70</y>
+      <width>24</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image:url(:/res/assets/war.png);</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>580</x>
-      <y>170</y>
+      <x>600</x>
+      <y>140</y>
       <width>99</width>
       <height>27</height>
      </rect>

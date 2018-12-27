@@ -1,5 +1,13 @@
 <RCC>
   <qresource prefix="res">
     <file>assets/ele.png</file>
+    <file>assets/eng.png</file>
+    <file>assets/gua.png</file>
+    <file>assets/mes.png</file>
+    <file>assets/nec.png</file>
+    <file>assets/ran.png</file>
+    <file>assets/rev.png</file>
+    <file>assets/thi.png</file>
+    <file>assets/war.png</file>
   </qresource>
 </RCC>
