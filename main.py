@@ -1,6 +1,8 @@
 #!/usr/bin/python
 import sys
-from PyQt5 import QtCore, QtGui, QtWidgets, uic
+from PyQt5 import uic
+from PyQt5 import QtGui, QtCore, QtWidgets
+from PyQt5.QtWidgets import *
 import random
 
 qtCreatorFile = "window.ui"
@@ -11,6 +13,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
 		QtWidgets.QMainWindow.__init__(self)
 		Ui_MainWindow.__init__(self)
 		self.setupUi(self)
+
 
 STEPS = 100
 
@@ -97,7 +100,7 @@ def main():
 	avgDmg(1961, 0.7076, 2.1407, sel)	# ass
 
 if __name__ == '__main__':
-	app = QtWidgets.QApplication(sys.argv)
+	app = QApplication(sys.argv)
 	app.setWindowIcon(QtGui.QIcon("./assets/icon.png"))
 	window = MyApp()
 	window.show()
