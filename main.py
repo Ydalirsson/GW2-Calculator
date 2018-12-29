@@ -13,6 +13,11 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
 		QtWidgets.QMainWindow.__init__(self)
 		Ui_MainWindow.__init__(self)
 		self.setupUi(self)
+		self.listWidget_2.itemClicked.connect(self.item_click)
+
+		def item_click(self, item):
+			print(item, str(item.text()) )
+
 
 
 STEPS = 100
