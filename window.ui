@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>798</width>
     <height>600</height>
    </rect>
   </property>
@@ -14,7 +14,7 @@
    <string>GW2Calculator</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="tvCap">
     <property name="geometry">
      <rect>
       <x>290</x>
@@ -34,7 +34,7 @@
      <string>Build Calculator</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_1">
+   <widget class="QLabel" name="tvClass">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -47,7 +47,7 @@
      <string>Klasse</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="tvWeapon">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -177,7 +177,7 @@
      <string notr="true">border-image:url(:/res/assets/war.png);</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="btnHead">
     <property name="geometry">
      <rect>
       <x>580</x>
@@ -190,7 +190,7 @@
      <string>Head</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="tvAvgDL">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -211,7 +211,7 @@
      <string>average Damage (light):</string>
     </property>
    </widget>
-   <widget class="QListWidget" name="listWidget">
+   <widget class="QListWidget" name="lstWeapons">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -310,7 +310,7 @@
      </property>
     </item>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="tvOptDL">
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -331,7 +331,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_5">
+   <widget class="QLabel" name="tvAvgDM">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -352,7 +352,7 @@
      <string>average Damage (medium):</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_6">
+   <widget class="QLabel" name="tvAvgDH">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -373,7 +373,7 @@
      <string>average Damage (heavy):</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_7">
+   <widget class="QLabel" name="tvOptDM">
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -394,7 +394,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_8">
+   <widget class="QLabel" name="tvOptDH">
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -415,7 +415,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_9">
+   <widget class="QLabel" name="tvOptSurvive">
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -436,7 +436,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_10">
+   <widget class="QLabel" name="tvSurvive">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -457,7 +457,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;hits to die&lt;/span&gt;&lt;span style=&quot; font-size:10pt; vertical-align:super;&quot;&gt;*&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="btnTorso">
     <property name="geometry">
      <rect>
       <x>580</x>
@@ -470,7 +470,7 @@
      <string>Torso</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="btnShoulders">
     <property name="geometry">
      <rect>
       <x>580</x>
@@ -483,7 +483,7 @@
      <string>shoulders</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_6">
+   <widget class="QPushButton" name="btnFoots">
     <property name="geometry">
      <rect>
       <x>580</x>
@@ -496,7 +496,7 @@
      <string>foot</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_7">
+   <widget class="QPushButton" name="btnLegs">
     <property name="geometry">
      <rect>
       <x>580</x>
@@ -509,7 +509,7 @@
      <string>leg</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_8">
+   <widget class="QPushButton" name="btnHands">
     <property name="geometry">
      <rect>
       <x>580</x>
@@ -522,7 +522,7 @@
      <string>hands</string>
     </property>
    </widget>
-   <widget class="QListWidget" name="listWidget_2">
+   <widget class="QListWidget" name="lstRare">
     <property name="geometry">
      <rect>
       <x>680</x>
@@ -648,8 +648,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>25</height>
+     <width>798</width>
+     <height>22</height>
     </rect>
    </property>
   </widget>

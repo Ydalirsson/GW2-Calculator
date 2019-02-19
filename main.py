@@ -13,10 +13,22 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
 		QtWidgets.QMainWindow.__init__(self)
 		Ui_MainWindow.__init__(self)
 		self.setupUi(self)
-		self.listWidget_2.itemClicked.connect(self.item_click)
 
-		def item_click(self, item):
-			print(item, str(item.text()) )
+		icBtns = [QPushButton("ic_ele"), QPushButton("ic_eng"), QPushButton("ic_gua")]
+		self.ic_btn_group = QButtonGroup()
+		for i in range(len(icBtns)):
+			self.ic_btn_group.addButton(icBtns[i], i)
+
+		self.ic_eng.clicked.connect(self.getSelected)
+		self.ic_ele.clicked.connect(self.getSelected)
+
+		self.lstWeapons.itemClicked.connect(self.item_click)
+
+	def item_click(self, item):
+		self.tvOPtDL.setText( str(item.text()) )
+
+	def getSelected(self, item):
+		print(item.text)
 
 
 
