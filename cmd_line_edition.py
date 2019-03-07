@@ -1,19 +1,15 @@
 #!/usr/bin/python
 
-import sys
-
-from mainwindow import Ui_MainWindow
-from PyQt5 import QtCore, QtGui, QtWidgets
-
+''' STILL IN  PROGRESS '''
+# TODO: give this file some love
 import random
-
-# define gobals
 
 STEPS = 100
 
 profs = ["Warrior", "Guardian", "Revenant",
 		 "Ranger", "Thief", "Engineer",
-		 "Necromancer", "Elementalist", "Mesmer"]
+		 "Necromancer", "Elementalist", "Mesmer"
+		 ]
 
 weapon = {0: [900, 1100, "Axe"],
 			1: [970, 1030, "Dagger"],
@@ -74,32 +70,6 @@ def effecLife(vit, tough):
 		i += 1
 	print("Hits to death", i)
 
-
-# define signale, slots, event actions
-class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
-	def __init__(self, parent = None):
-		super(MyApp, self).__init__()
-		self.setupUi(self)
-
-		'''
-		icBtns = [QPushButton("ic_ele"), QPushButton("ic_eng"), QPushButton("ic_gua")]
-		self.ic_btn_group = QButtonGroup()
-		for i in range(len(icBtns)):
-			self.ic_btn_group.addButton(icBtns[i], i)
-
-		self.ic_eng.clicked.connect(self.getSelected)
-		self.ic_ele.clicked.connect(self.getSelected)
-		'''
-
-		self.lstWeapons.itemClicked.connect(self.item_click)
-
-	def item_click(self, item):
-		print (item.text())
-
-	def getSelected(self, item):
-		print(item.text() )
-
-#
 def main():
 	print("Choose your prof")
 	for i in profs:
@@ -117,10 +87,5 @@ def main():
 
 	avgDmg(1961, 0.7076, 2.1407, sel)	# ass
 
-# boilerplate, create window
 if __name__ == '__main__':
-	app = QtWidgets.QApplication(sys.argv)
-	app.setWindowIcon(QtGui.QIcon("./assets/icon.png"))
-	ui = MyApp()
-	ui.show()
-	sys.exit(app.exec_())
+	main()
