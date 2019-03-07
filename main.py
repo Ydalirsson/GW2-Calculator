@@ -4,10 +4,15 @@ import sys
 
 from mainwindow import Ui_MainWindow
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import *
 
 import random
 
 # define gobals
+
+selectedWeapon = None
+selectedClass = None
+
 
 STEPS = 100
 
@@ -34,6 +39,7 @@ health = {
 	1: [5922, [profs[2], profs[3], profs[5], profs[8]] ],
 	2: [1645, [profs[1], profs[4], profs[7]] ]
 }
+
 armor = {
 	0: [1920, [profs[6], profs[7], profs[8]] ],
 	1: [2064, [profs[3], profs[4], profs[5]] ],
@@ -74,30 +80,33 @@ def effecLife(vit, tough):
 		i += 1
 	print("Hits to death", i)
 
-
 # define signale, slots, event actions
 class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
 	def __init__(self, parent = None):
 		super(MyApp, self).__init__()
 		self.setupUi(self)
 
-		'''
-		icBtns = [QPushButton("ic_ele"), QPushButton("ic_eng"), QPushButton("ic_gua")]
+		self.icBtns = [self.ic_war, self.ic_gua, self.ic_rev,
+					self.ic_ran, self.ic_thi, self.ic_eng,
+					self.ic_nec, self.ic_ele, self.ic_mes]
 		self.ic_btn_group = QButtonGroup()
-		for i in range(len(icBtns)):
-			self.ic_btn_group.addButton(icBtns[i], i)
+		self.ic_btn_group.setExclusive(False)
+		for i in range(len(self.icBtns)):
+			self.ic_btn_group.addButton(self.icBtns[i], i)
+		print(self.ic_btn_group.buttons())
 
-		self.ic_eng.clicked.connect(self.getSelected)
-		self.ic_ele.clicked.connect(self.getSelected)
-		'''
+		self.ic_btn_group.buttonClicked[int].connect(self.selectClass)
+		#self.ic_eng.clicked.connect(self.selectClass)
+		#self.ic_ele.clicked.connect(self.selectClass)
 
-		self.lstWeapons.itemClicked.connect(self.item_click)
+		self.lstWeapons.itemClicked.connect(self.selectWeapon)
 
-	def item_click(self, item):
-		print (item.text())
+	def selectWeapon(self, item):
+		print(item.text())
 
-	def getSelected(self, item):
-		print(item.text() )
+	def selectClass(self, id):
+		print('button %d has been pressed' % id )
+
 
 #
 def main():
