@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(798, 600)
+        MainWindow.resize(780, 600)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.tvCap = QtWidgets.QLabel(self.centralwidget)
@@ -234,9 +234,12 @@ class Ui_MainWindow(object):
         brush.setStyle(QtCore.Qt.SolidPattern)
         item.setForeground(brush)
         self.lstRare.addItem(item)
+        self.btnCalculate = QtWidgets.QPushButton(self.centralwidget)
+        self.btnCalculate.setGeometry(QtCore.QRect(200, 490, 97, 27))
+        self.btnCalculate.setObjectName("btnCalculate")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 798, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 780, 25))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -285,7 +288,7 @@ class Ui_MainWindow(object):
         item = self.lstWeapons.item(13)
         item.setText(_translate("MainWindow", "Rifle"))
         item = self.lstWeapons.item(14)
-        item.setText(_translate("MainWindow", "Short bow"))
+        item.setText(_translate("MainWindow", "Shortbow"))
         item = self.lstWeapons.item(15)
         item.setText(_translate("MainWindow", "Staff"))
         self.lstWeapons.setSortingEnabled(__sortingEnabled)
@@ -318,6 +321,7 @@ class Ui_MainWindow(object):
         item = self.lstRare.item(6)
         item.setText(_translate("MainWindow", "Legendary"))
         self.lstRare.setSortingEnabled(__sortingEnabled)
+        self.btnCalculate.setText(_translate("MainWindow", "Calculate"))
 
 import res_rc
 

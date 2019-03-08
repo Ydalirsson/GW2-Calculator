@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>798</width>
+    <width>780</width>
     <height>600</height>
    </rect>
   </property>
@@ -301,7 +301,7 @@
     </item>
     <item>
      <property name="text">
-      <string>Short bow</string>
+      <string>Shortbow</string>
      </property>
     </item>
     <item>
@@ -642,14 +642,27 @@
      </property>
     </item>
    </widget>
+   <widget class="QPushButton" name="btnCalculate">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>490</y>
+      <width>97</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Calculate</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>798</width>
-     <height>22</height>
+     <width>780</width>
+     <height>25</height>
     </rect>
    </property>
   </widget>
